@@ -14,8 +14,8 @@ category = st.sidebar.selectbox("Select a product that you use:", exposure_data[
 hzd = st.sidebar.selectbox("Select a health condition to see the chemicals & products to avoid:", ["Hormonal Imbalance/PCOD/Diabetes", "Respiratory Issues", "Liver Issues", "Skin Irritation", "Cancer", "Reproductive Issues", "Neurological Issues", "Immune System issues","Other Allergies"])
 
 # Apply filter
-df_filtered = exposure_data[exposure_data['Consumer Product'].isin(category)]
-dff = df_filtered[['Product','Chemical','Health Hazards']]
+df_filtered = exposure_data[exposure_data['Consumer Product'].isin([category])]  # Wrap category in a list
+dff = df_filtered[['Product', 'Chemical', 'Health Hazards']]
 
 # Exposure breakdown visualization
 st.write("Ensure that the selected product does not have the following chemicals in ingredient list.")
