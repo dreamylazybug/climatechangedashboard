@@ -10,7 +10,7 @@ st.set_page_config(page_title="Take charge of your chemical exposure", layout="w
 st.title("What's my Chemical Exposure today?")
 
 # Filter options
-category = st.sidebar.st.selectbox("Select a product that you use:", exposure_data['Consumer Product'].unique())
+category = st.sidebar.selectbox("Select a product that you use:", exposure_data['Consumer Product'].unique())
 hzd = st.sidebar.selectbox("Select a health condition to see the chemicals & products to avoid:", ["Hormonal Imbalance/PCOD/Diabetes", "Respiratory Issues", "Liver Issues", "Skin Irritation", "Cancer", "Reproductive Issues", "Neurological Issues", "Immune System issues","Other Allergies"])
 
 # Apply filter
